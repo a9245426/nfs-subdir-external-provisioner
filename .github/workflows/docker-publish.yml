@@ -30,7 +30,7 @@ jobs:
       - name: Build and Push Docker image
         env:
           ## 修改为你对应的镜像名称
-          IMAGE_NAME: ${{ secrets.ALIYUN_REGISTRY }}/xdbin/beancount-gs
+          IMAGE_NAME: ${{ secrets.ALIYUN_REGISTRY }}/zwh-ns/zwh-ns-repo
           BRANCH: ${{ env.branch_name }}
         run: |
           docker build -t $IMAGE_NAME:$BRANCH .
