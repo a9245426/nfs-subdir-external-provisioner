@@ -20,8 +20,8 @@ jobs:
         env:
           REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
           USERNAME: ${{ secrets.ALIYUN_USERNAME }}
-          PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
-        run: echo "${{ secrets.ALIYUN_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u ${{ secrets.ALIYUN_USERNAME }} --password-stdin
+          PASSWORD: ${{ secrets.ALIYUN_PASSOWRD }}
+        run: echo "${{ secrets.ALIYUN_PASSOWRD }}" | docker login ${{ env.REGISTRY }} -u ${{ secrets.ALIYUN_USERNAME }} --password-stdin
 
       - name: Extract branch name
         id: extract_branch
